@@ -1,0 +1,28 @@
+# Fdb version 4
+["pdflatex"] 1760769259.17452 "d:/vs_source/verilog_text/test.tex" "test.pdf" "test" 1760769259.63852 0
+  "C:/Program Files/MiKTeX/tex/generic/babel/babel.sty" 1759333861 146665 1d1535884f6fcab33ff7bf336b21bae5 ""
+  "C:/Program Files/MiKTeX/tex/generic/babel/locale/vi/babel-vi.ini" 1759333863 4805 6d5465d1b19f96370b4033f99e25de20 ""
+  "C:/Program Files/MiKTeX/tex/generic/babel/locale/vi/babel-vietnamese.tex" 1759333863 377 64e7dd9685eaf7c56d45042ca54a4951 ""
+  "C:/Program Files/MiKTeX/tex/generic/babel/txtbabel.def" 1759333861 5231 82bb24bf20af7e4d760717f2cadb5170 ""
+  "C:/Program Files/MiKTeX/tex/latex/arabi/bblopts.cfg" 1705750854 902 c30e5c373bc58bde21f8f63a3091626f ""
+  "C:/Program Files/MiKTeX/tex/latex/base/article.cls" 1749467999 20144 b966087dda3b194755eb460d32e2ef75 ""
+  "C:/Program Files/MiKTeX/tex/latex/base/fontenc.sty" 1749467999 5275 2f50a1b91fdc3c2c6ff41843a6854061 ""
+  "C:/Program Files/MiKTeX/tex/latex/base/inputenc.sty" 1749467999 5048 0270515b828149155424600fd2d58ac5 ""
+  "C:/Program Files/MiKTeX/tex/latex/base/size10.clo" 1749467999 8448 686612a86f0e04f41ea577f5ec7e83d8 ""
+  "C:/Program Files/MiKTeX/tex/latex/l3backend/l3backend-pdftex.def" 1751005717 30351 a2b09edc6c93a742566b222c33d0278e ""
+  "C:/Users/votro_ndnyus1/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1760768817 88371 b965f57369ed322039596060d18f4416 ""
+  "C:/Users/votro_ndnyus1/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1760768593 13311580 3708128ecf2b4f37943664608cfc9e73 ""
+  "C:/Users/votro_ndnyus1/AppData/Roaming/MiKTeX/fonts/tfm/vntex/vnr/vnr10.tfm" 1644004041 3980 a378198bbdb2c6fcd4b722396a62ad27 ""
+  "C:/Users/votro_ndnyus1/AppData/Roaming/MiKTeX/fonts/type1/vntex/vnr/vnr10.pfb" 1644004041 41608 f55c1a79be39d4e7ed224ba660d7353d ""
+  "C:/Users/votro_ndnyus1/AppData/Roaming/MiKTeX/tex/latex/babel-vietnamese/vietnamese.ldf" 1451823267 5845 4c316f1620fa004601754fb032466a9b ""
+  "C:/Users/votro_ndnyus1/AppData/Roaming/MiKTeX/tex/latex/vntex/t5cmr.fd" 1368738347 1333 ab1c3d512aa3d88df568aed3641db58f ""
+  "C:/Users/votro_ndnyus1/AppData/Roaming/MiKTeX/tex/latex/vntex/t5enc.def" 1368738347 21986 ccb3b8f7cc27fbd61b3daabbbb82ad3f ""
+  "C:/Users/votro_ndnyus1/AppData/Roaming/MiKTeX/tex/latex/vntex/t5enc.dfu" 1368738347 13949 387dd4fa58aea5f873839c93430fffed ""
+  "d:/vs_source/verilog_text/test.tex" 1760769258 227 4a843706c2ebcc02698c585be086574c ""
+  "test.aux" 1760769259 173 6dd3fcdc25fdd6b2281c245587e4783c "pdflatex"
+  "test.tex" 1760769258 227 4a843706c2ebcc02698c585be086574c ""
+  (generated)
+  "test.aux"
+  "test.log"
+  "test.pdf"
+  (rewritten before read)
