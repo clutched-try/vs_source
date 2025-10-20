@@ -11,19 +11,26 @@ def simulate_systolic_array(A, B, verbose=True, max_cycle=None):
 
     assert A.shape == (n, n) and B.shape == (n, n)
 
-    PEs = np.full((n, n),{'a': None, 'b': None, 'mult': None, 'acc': 0})
+    PEs = [[{'a': None, 'b': None, 'mult': None, 'acc': 0} for _ in range(n)] for _ in range(n)]
+
     snapshots = []
     if(max_cycle is None):
-        max_cycle = n*2+2
+        max_cycle = n**2
     for t in range(max_cycle):
 
         # --- inject a, b to PEs ---
         next_a = np.full((n, n), None)
         next_b = np.full((n,n), None)
         for k in range(n):
-            if k <= t and t - k < n:
-                next_a[k][0] = A[t-k][k]
-                next_b[0][k] = B[k][t-k]
+            for i in range(n):
+                if t == k + i:
+                    next_a[i][0] = A[i][k]
+        
+        for j in range(n):
+            for k in range(n):
+                if t == k + j:
+                    next_b[0][j] = B[k][j]
+
         
         # --- multilply ----
         for i in range(n):
@@ -39,22 +46,18 @@ def simulate_systolic_array(A, B, verbose=True, max_cycle=None):
                 pe = PEs[i][j]
                 if pe ['mult'] is not None:
                     pe['acc'] += pe['mult']
-                pe['mult'] = None
+                    pe['mult'] = None
+                
         
         # --- propagate ---
-        for k in range(n):
-            if t== k:
-                for i in range(n):
-                    pe = PEs[i][k]
-                    if pe['a'] is not None and i-1 < n:
-                        next_a[i-1][k] = pe['a']
-
-        for k in range(n):
-            if t== k:
-                for j in range(n):
-                    pe = PEs[k][j]
-                    if pe['b'] is not None and j-1 < n:
-                        next_b[k][j-1] = pe['b']                    
+        for i in range(n):
+            for j in range(n):
+                pe = PEs[i][j]
+                if j+1 < n and pe['a'] is not None:
+                    next_a[i][j+1] = pe['a']
+                if i+1 < n and pe['b'] is not None:
+                    next_b[i+1][j] = pe['b']
+                
 
         # --- update ----
         for i in range(n):
@@ -73,7 +76,7 @@ def simulate_systolic_array(A, B, verbose=True, max_cycle=None):
                        for i in range(n) for j in range(n))
         any_mult = any(PEs[i][j]['mult'] is not None
                        for i in range(n) for j in range(n))
-        pending_inj = t < 2 * n - 2
+        pending_inj = t < n*2 - 2
         if not (any_data or any_mult or pending_inj) and t > 0:
             print(f"Finish at {t+1}th cycle")
             break
